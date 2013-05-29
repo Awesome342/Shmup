@@ -8,16 +8,18 @@ class Bullet
 {
     public:
         Bullet();
-        ~Bullet();
-        void init( SDL_Rect Pos );
+        void init( const char* filename, SDL_Rect POs );
+        void draw( SDL_Surface *Screen );
         void Fire();
         void Update();
+        void updatePos( SDL_Rect POs );
+        ~Bullet();
 
     private:
-        SDL_Surface *Img[10];
-        SDL_Rect Pos[10];
-        int BulletsOnScreen;
+        SDL_Surface *Img;
+        SDL_Rect Pos;
         bool IsFiring;
+        bool IsVisible;
 };
 
 #endif

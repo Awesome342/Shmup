@@ -3,7 +3,7 @@
 
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
-#include "Bullet.h"
+#include "BulletManager.h"
 
 class Player
 {
@@ -18,7 +18,7 @@ class Player
         SDL_Rect Pos;
         SDL_Rect Clip;
         SDL_Surface *Img;
-        Bullet bullet;
+        BulletManager Bullet;
 };
 
 #endif

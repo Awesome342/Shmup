@@ -11,14 +11,13 @@ Player::Player()
     Clip.y = 0;
     Clip.w = 32;
     Clip.h = 32;
-    bullet.init( Pos );
+    Bullet.init( Pos );
 }
 
 void Player::Draw( SDL_Surface *Screen )
 {
-    bullet.Update();
+    Bullet.draw( Screen );
     SDL_BlitSurface( Img, &Clip, Screen, &Pos );
-//    bullet.Update();
 }
 
 void Player::getInput()
@@ -42,7 +41,7 @@ void Player::getInput()
     }
     if ( key[SDLK_SPACE] )
     {
-        bullet.Fire();
+        Bullet.Fire();
     }
 }
 
